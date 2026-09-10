@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Field Notes Weather</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/weather.css">
+</head>
+<body>
+  <main class="weather-app">
+    <header class="topbar">
+      <a class="brand" href="/">FIELD / WEATHER</a>
+      <span class="date-label">LIVE CONDITIONS</span>
+    </header>
+    <section class="hero">
+      <p class="eyebrow">YOUR WINDOW TO THE WORLD</p>
+      <h1>How does it feel<br><em>out there?</em></h1>
+      <form class="search" id="weather-form">
+        <label for="city">Search a city</label>
+        <div class="search-row">
+          <input id="city" name="city" type="search" placeholder="Try Tokyo, Lisbon..." autocomplete="off" required>
+          <button type="submit" aria-label="Search weather">SEARCH <span>↗</span></button>
+        </div>
+      </form>
+    </section>
+    <section class="weather-result" id="weather-result" aria-live="polite">
+      <div class="empty-state">Enter a city to see its atmosphere.</div>
+    </section>
+    <footer>DATA BY OPEN-METEO <span>•</span> UPDATED WHEN YOU SEARCH</footer>
+  </main>
+  <script src="/static/weather.js"></script>
+</body>
+</html>

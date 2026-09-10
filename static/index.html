@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="intro" aria-label="Calculator introduction">
+      <p class="eyebrow">PRECISION / 01</p>
+      <h1>Make numbers<br><em>make sense.</em></h1>
+      <p class="description">A clean, focused workspace for quick calculations and clear results.</p>
+      <div class="status"><span></span> API CONNECTED</div>
+    </section>
+
+    <section class="calculator" aria-label="Calculator">
+      <div class="display">
+        <div class="expression" id="expression">0</div>
+        <div class="result" id="result">0</div>
+      </div>
+      <div class="keypad">
+        <button class="key utility" data-action="clear">AC</button>
+        <button class="key utility" data-action="backspace" aria-label="Delete last digit">DEL</button>
+        <button class="key operator" data-operator="/">÷</button>
+        <button class="key operator" data-operator="*">×</button>
+        <button class="key" data-value="7">7</button>
+        <button class="key" data-value="8">8</button>
+        <button class="key" data-value="9">9</button>
+        <button class="key operator" data-operator="-">−</button>
+        <button class="key" data-value="4">4</button>
+        <button class="key" data-value="5">5</button>
+        <button class="key" data-value="6">6</button>
+        <button class="key operator" data-operator="+">+</button>
+        <button class="key" data-value="1">1</button>
+        <button class="key" data-value="2">2</button>
+        <button class="key" data-value="3">3</button>
+        <button class="key equals" data-action="calculate">=</button>
+        <button class="key zero" data-value="0">0</button>
+        <button class="key" data-value=".">.</button>
+      </div>
+      <p class="message" id="message" role="status"></p>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

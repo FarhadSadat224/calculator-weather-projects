@@ -89,6 +89,26 @@ Upon initiation, Ecoute will begin transcribing your microphone input and speake
 
 The --api flag will use the whisper api for transcriptions. This significantly enhances transcription speed and accuracy, and it works in most languages (rather than just English without the flag). It's expected to become the default option in future releases. However, keep in mind that using the Whisper API will consume more OpenAI credits than using the local model. This increased cost is attributed to the advanced features and capabilities that the Whisper API provides. Despite the additional expense, the substantial improvements in speed and transcription accuracy may make it a worthwhile investment for your use case.
 
+### Calculator
+
+Install the dependencies, then start the calculator app with:
+
+```
+uvicorn Calculator:app --reload
+```
+
+Open `http://127.0.0.1:8000` in a browser. The calculator UI is served from `static/`, and calculations are available through `POST /api/calc` with a JSON body such as `{"left": 12, "operator": "/", "right": 4}`.
+
+### Weather App
+
+Start the separate Flask weather app with:
+
+```
+python weather_app.py
+```
+
+Open `http://127.0.0.1:5000` in a browser and search for a city. The app uses Open-Meteo for geocoding and current weather data, so no API key is required. Weather data is also available through `GET /api/weather?city=London`.
+
 ### ⚠️ Limitations
 
 While Ecoute provides real-time transcription and response suggestions, there are several known limitations to its functionality that you should be aware of:
