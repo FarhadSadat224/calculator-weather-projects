@@ -11,8 +11,6 @@ If you’re working with speech detection or transcription for meetings, conside
 
 https://github.com/user-attachments/assets/5616421f-838d-439f-8b15-0df7b8d33459
 
-Ecoute is designed to help users in their conversations by providing live transcriptions.
-
 ## 🚀 Getting Started
 
 Follow these steps to set up and run Ecoute on your local machine.
