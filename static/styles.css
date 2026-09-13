@@ -27,6 +27,7 @@ body::before {
   opacity: .38;
   background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
   background-size: 44px 44px;
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 80%);
   mask-image: linear-gradient(to bottom, black, transparent 80%);
 }
 
@@ -47,7 +48,7 @@ h1 em { color: var(--lime-dark); font-style: normal; }
 .description { max-width: 300px; margin: 30px 0 42px; color: var(--muted); line-height: 1.6; }
 .status { display: flex; align-items: center; gap: 9px; color: var(--muted); font: 500 11px "DM Mono", monospace; }
 .status span { width: 8px; height: 8px; border-radius: 50%; background: #76b83f; box-shadow: 0 0 0 4px #dcebc8; }
-.calculator { padding: 20px; border: 1px solid rgba(23, 34, 31, .08); border-radius: 24px; background: rgba(251, 250, 247, .85); box-shadow: 0 24px 80px rgba(42, 51, 40, .12); backdrop-filter: blur(10px); }
+.calculator { padding: 20px; border: 1px solid rgba(23, 34, 31, .08); border-radius: 24px; background: rgba(251, 250, 247, .85); box-shadow: 0 24px 80px rgba(42, 51, 40, .12); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
 .display { min-height: 142px; padding: 22px 24px; border-radius: 16px; background: var(--ink); color: white; text-align: right; }
 .expression { min-height: 25px; color: #9fa9a3; font: 500 16px "DM Mono", monospace; overflow: hidden; text-overflow: ellipsis; }
 .result { margin-top: 12px; font: 500 clamp(38px, 7vw, 58px) "DM Mono", monospace; letter-spacing: -.08em; overflow: hidden; text-overflow: ellipsis; }
