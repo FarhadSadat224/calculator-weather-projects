@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101b1b">
+  <title>Atelier Timepiece</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/clock.css">
+</head>
+<body>
+  <main class="clock-page">
+    <header class="topbar">
+      <a class="brand" href="/">ATELIER <span>/</span> TIME</a>
+      <p class="edition">NO. 001 <span>•</span> LOCAL TIMEPIECE</p>
+    </header>
+
+    <section class="clock-layout" aria-label="Real-time analog clock">
+      <div class="intro">
+        <p class="eyebrow">A QUIET MOMENT</p>
+        <h1>Time,<br><em>beautifully kept.</em></h1>
+        <p class="lede">A precise, tactile clock for your desk. Built with nothing but the browser and a little patience.</p>
+        <div class="controls" aria-label="Clock settings">
+          <button class="control is-active" id="format-toggle" type="button" aria-pressed="true">24 HOUR</button>
+          <button class="control" id="seconds-toggle" type="button" aria-pressed="true">SECONDS ON</button>
+        </div>
+      </div>
+
+      <div class="watch-wrap">
+        <div class="watch" id="watch" role="img" aria-label="Analog clock showing the current local time">
+          <div class="watch-face">
+            <div class="brand-mark">ATELIER<br><span>TIME</span></div>
+            <div class="ticks" aria-hidden="true"></div>
+            <div class="numerals" aria-hidden="true">
+              <span class="numeral n12">XII</span><span class="numeral n3">III</span>
+              <span class="numeral n6">VI</span><span class="numeral n9">IX</span>
+            </div>
+            <div class="hand hour" id="hour-hand"></div>
+            <div class="hand minute" id="minute-hand"></div>
+            <div class="hand second" id="second-hand"></div>
+            <div class="pin"></div>
+          </div>
+        </div>
+        <div class="digital" aria-live="polite">
+          <span id="digital-time">00:00:00</span>
+          <span id="period">LOCAL</span>
+        </div>
+        <p class="date" id="date-label">Monday, January 1, 2026</p>
+      </div>
+    </section>
+
+    <footer><span class="status-dot"></span> SYNCHRONIZED TO YOUR DEVICE</footer>
+  </main>
+  <script src="/static/clock.js"></script>
+</body>
+</html>
